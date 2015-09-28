@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "browser-sync start --server --directory --files='index.html'",
-    "sass": "node-sass src/scss/main.scss --output css/"
+    "sass": "node-sass src/scss/main.scss --output src/css/"
   },
   "repository": {
     "type": "git",
