@@ -1,0 +1,27 @@
+{
+  "name": "tiy-github",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "browser-sync start --server --directory --files='index.html'",
+    "sass": "node-sass src/scss/main.scss --output css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyrist/TIY-GitHub.git"
+  },
+  "author": "jeremyrist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremyrist/TIY-GitHub/issues"
+  },
+  "homepage": "https://github.com/jeremyrist/TIY-GitHub#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "node-sass": "^3.3.3"
+  }
+}
