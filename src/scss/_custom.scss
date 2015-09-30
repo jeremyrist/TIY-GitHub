@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin-left: 8px;
 }
 body {
     border: 1px solid black;
@@ -18,15 +19,24 @@ body {
         border: 5px solid black;
         margin: 5px 5px;
       }
-      img {
-        float: right;
-      }
       .big-column {
-          display: inline-block;
-          width: 750px;
-          height: 1100px;
-          border: 5px solid red;
-          margin: 5px 5px;
-      }
+        display: inline-block;
+        width: 750px;
+        height: 1100px;
+        border: 5px solid red;
+        margin: 5px 5px;
+        margin-left: 300px;
+        margin-top: -607px;
+ }
+        img {
+          margin-left: 19px;
+        }
+          h2 {
+            font-weight: lighter;
+          }
+            hr {
+              width: 90%;
+              margin-left: 10px;
+            }
    }
 }
