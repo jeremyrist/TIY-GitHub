@@ -1,7 +1,10 @@
 (function(){
-  // console.log("IIFE working!") //tracer bullet
-  // $.ajax({url: "https://api.github.com/users/octocat"});
-  // console.log($.ajax({url:"../apis/github/users/octocat.json"}));
   console.log($.ajax("../apis/github/users/octocat.json"));
-
 })();
+
+// IIFE stands for
+// Immediately-invoked function expression
+
+// The purple function at the top is how you start an IIFE
+
+// The function is then defined btw the curly braces
