@@ -19,24 +19,44 @@ body {
         border: 5px solid black;
         margin: 5px 5px;
       }
-      .big-column {
-        display: inline-block;
-        width: 750px;
-        height: 1100px;
-        border: 5px solid red;
-        margin: 5px 5px;
-        margin-left: 300px;
-        margin-top: -607px;
- }
-        img {
-          margin-left: 19px;
+        #login {
+          color: gray;
         }
-          h2 {
-            font-weight: lighter;
+          .small-stats {
+            display: inline-block;
+            width: 30%;
+            border: 2px solid blue;
+            width: 27%;
+            height: 80px;
           }
-            hr {
-              width: 90%;
-              margin-left: 10px;
+            .small-blue {
+              text-align: center;
+              color: gray;
+              margin-top: 2px;
             }
+            h3 {
+              color: lightblue;
+              font-weight: bold;
+              margin-left: 20px;
+            }
+          .big-column {
+            display: inline-block;
+            width: 750px;
+            height: 1100px;
+            border: 5px solid red;
+            margin: 5px 5px;
+            margin-left: 300px;
+            margin-top: -694px;
+     }
+            img {
+              margin-left: 19px;
+            }
+              h2 {
+                font-weight: lighter;
+              }
+                hr {
+                  width: 90%;
+                  margin-left: 10px;
+                }
    }
 }
