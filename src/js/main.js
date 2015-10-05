@@ -10,5 +10,5 @@
 // The function is then defined btw the curly braces
 
 $('ul.tabs').each(function(){
-  var $active = $(this).find('span');
+  var $active = ("repositories");
 })
