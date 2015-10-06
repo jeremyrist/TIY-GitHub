@@ -62,3 +62,11 @@ $.ajax({
       $('h2').text( json.login);
   }
 })
+
+// lodash.template
+
+// using custom template delimiters
+_.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+var compiled = _.template('hello {{ followers }}!');
+compiled({ 'followers': 'mustache' });
+// → 'hello mustache!'
