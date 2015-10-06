@@ -1,0 +1,19 @@
+{
+  "name": "tiy-github",
+  "version": "0.0.3",
+  "homepage": "https://github.com/jeremyrist/TIY-GitHub",
+  "authors": [
+    "JEREMY RIST <JTRAIN18@BRANDEIS.EDU>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "private": true
+}
