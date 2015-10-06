@@ -59,5 +59,6 @@ $.ajax({
   success: function(json)
   {
       $('h1').text( json.name );
+      $('h2').text( json.login);
   }
 })
