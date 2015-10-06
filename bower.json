@@ -6,14 +6,18 @@
     "JEREMY RIST <JTRAIN18@BRANDEIS.EDU>"
   ],
   "description": "",
-  "main": "",
-  "moduleType": [
-    "amd",
-    "es6",
-    "globals",
-    "node",
-    "yui"
+  "main": "src/index.html",
+  "moduleType": [ ],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
-  "license": "MIT",
-  "private": true
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
 }
