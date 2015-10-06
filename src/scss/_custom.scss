@@ -39,6 +39,9 @@ body {
               font-weight: bold;
               margin-left: 20px;
             }
+              #userinfo {
+                display: block;
+              }
           .big-column {
             display: inline-block;
             width: 750px;
@@ -57,6 +60,17 @@ body {
                 hr {
                   width: 90%;
                   margin-left: 10px;
+                }
+
+                li {
+                  display:inline-block;
+                }
+
+                .right {
+                  float:right;
+                }
+                p {
+                  display:inline-block;
                 }
    }
 }
