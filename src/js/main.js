@@ -48,21 +48,16 @@ $('ul.tabs').each(function(){
    });
  });
 
- $.ajax({
-  dataType: "json",
-  url: "apis/github/users/jeremyrist",
-  data: data,
-  success: success
-});
 
-$.getJSON( "ajax/test.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
+// Time to try to get that jQuery.getJSON to work!
+ var userApiUrl = ("../../apis/github/users/jeremyrist.json");
 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-});
+$.ajax({
+  url: userApiUrl,
+//  url: "https://api.github.com/users/jeremyrist"
+  dataType: 'json',
+  success: function(json)
+  {
+      $('h1').text( json.name );
+  }
+})
