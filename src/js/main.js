@@ -67,6 +67,8 @@ $.ajax({
 
 // using custom template delimiters
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-var compiled = _.template('hello {{ followers }}!');
-compiled({ 'followers': 'mustache' });
+var compiled = _.template('hello {{ name }}!');
+compiled({ 'name': 'mustache' });
+
+console.log(compiled);
 // → 'hello mustache!'
