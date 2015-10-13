@@ -50,16 +50,22 @@ $('ul.tabs').each(function(){
 
 
 // Time to try to get that jQuery.getJSON to work!
- var userApiUrl = ("../../apis/github/users/jeremyrist.json");
+ // var userApiUrl = ("../../apis/github/users/jeremyrist.json");
 
 $.ajax({
-  url: userApiUrl,
-//  url: "https://api.github.com/users/jeremyrist"
+  // url: userApiUrl,
+  url: "https://api.github.com/users/jeremyrist",
   dataType: 'json',
   success: function(json)
   {
-      $('h1').text( json.name );
-      $('h2').text( json.login);
+      _.templateSettings.variable = 'm'
+      var template = _.template($('#lodashTemp').html())
+      var user = json;
+      $('.test').after(template(user));
+
+
+      // $('.small-column h1').text( json.name );
+      // $('.small-column h2').text( json.login);
   }
 })
 
@@ -67,7 +73,8 @@ $.ajax({
 
 // using custom template delimiters
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-var compiled = _.template('hello {{ name }}!');
+var sideView = $('#lodashTemp');
+var compiled = _.template(sideView, {variable: 'user'});
 compiled({ 'name': 'mustache' });
 
 console.log(compiled);
