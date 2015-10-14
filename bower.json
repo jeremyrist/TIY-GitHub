@@ -1,0 +1,26 @@
+{
+  "name": "tiy-github",
+  "version": "0.0.3",
+  "homepage": "https://github.com/jeremyrist/TIY-GitHub",
+  "authors": [
+    "JEREMY RIST <JTRAIN18@BRANDEIS.EDU>"
+  ],
+  "description": "",
+  "main": "src/index.html",
+  "moduleType": [],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "modernizr": "~3.1.0",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
