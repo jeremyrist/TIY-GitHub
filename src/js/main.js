@@ -72,10 +72,10 @@ $.ajax({
 // lodash.template
 
 // using custom template delimiters
-_.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-var sideView = $('#lodashTemp');
-var compiled = _.template(sideView, {variable: 'user'});
-compiled({ 'name': 'mustache' });
-
-console.log(compiled);
+// _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+// var sideView = $('#lodashTemp');
+// var compiled = _.template(sideView, {variable: 'user'});
+// compiled({ 'name': 'mustache' });
+//
+// console.log(compiled);
 // → 'hello mustache!'
