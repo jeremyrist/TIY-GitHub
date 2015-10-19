@@ -263,8 +263,9 @@ main.container {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media (min-width: 700px) {
     /* Style adjustments for viewports that meet the condition */
+    background-color: skyblue;
 }
 
 @media print,
