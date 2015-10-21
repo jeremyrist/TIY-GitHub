@@ -18,35 +18,32 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-      <h1 class="test"></h1>
-      <script type="text/template" id="lodashTemp">
 
-
-      <div class="container">
+      <main class="container" ng-app="TIY-GitHub">
         <div class="small-column">
           <div>
-          <img src="https://s-media-cache-ak0.pinimg.com/236x/20/cf/75/20cf75b89b94dfe6fe86c93c3c82ed70.jpg">
-            <h1><%- m.name %> </h1>
-            <h2 id="login">{{login}}</h2>
+          <img src="https://avatars3.githubusercontent.com/u/13407041?v=3&s=460">
+            <h1>{{jeremy.name}}</h1>
+            <h2 id="login">{{jeremy.login}}</h2>
               <hr />
           </div>
           <div id="userinfo">
-            <p><span class="octicon octicon-organization"></span> {{company}}</p>
-            <p><span class="octicon octicon-location"></span> {{location}}</p>
-            <p><span class="octicon octicon-mail"></span> {{email}}</p>
-            <p><span class="octicon octicon-link"></span> {{blog}}</p>
-            <p><span class="octicon octicon-clock"></span> {{created_at}}</p>
+            <p><span class="octicon octicon-organization"></span> {{jeremy.company}}</p>
+            <p><span class="octicon octicon-location"></span> {{jeremy.location}}</p>
+            <p><span class="octicon octicon-mail"></span> {{jeremy.email}}</p>
+            <p><span class="octicon octicon-link"></span> {{jeremy.blog}}</p>
+            <p><span class="octicon octicon-clock"></span> {{jeremy.created_at | date}}</p>
               <hr />
                 <nav class="small-stats">
-                  <h3>{{follwers}}</h3>
+                  <h3>{{jeremy.followers}}</h3>
                     <p class="small-blue">Followers
                 </nav>
                 <nav class="small-stats">
-                  <h3>{{starred}}</h3>
+                  <h3>{{jeremy.starred}}</h3>
                     <p class="small-blue">Starred</p>
                 </nav>
                 <nav class="small-stats">
-                  <h3>{{following}}</h3>
+                  <h3>{{jeremy.following}}</h3>
                     <p class="small-blue">Following</p>
                 </nav>
         </div>
@@ -94,17 +91,24 @@
             </div>
               <hr />
 
+              <textarea>{{body}}
+              </textarea>
           </div>
       </div>
+    </main>
 </script>
+
 
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/lodash/lodash.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <!-- <script src="../bower_components/lodash/lodash.js"></script> -->
+        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <script src="../bower_components/angular/angular.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <!-- bower:css -->
+
+        <!-- <script src=""> -->
+        <!-- bower:js -->
         <!-- endbower -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

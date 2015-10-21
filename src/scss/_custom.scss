@@ -43,7 +43,6 @@ body {
                 display: block;
               }
           .big-column {
-            display: inline-block;
             width: 750px;
             height: 1100px;
             border: 5px solid red;
@@ -53,6 +52,7 @@ body {
      }
             img {
               margin-left: 19px;
+              width: 250px;
             }
               h2 {
                 font-weight: lighter;
@@ -72,5 +72,9 @@ body {
                 p {
                   display:inline-block;
                 }
+                  textarea {
+                    width: 674px;
+                    height: 100px;
+                  }
    }
 }
