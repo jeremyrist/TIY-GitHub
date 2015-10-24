@@ -16,7 +16,6 @@ body {
         display: inline-block;
         width: 300px;
         height: 1100px;
-        border: 5px solid black;
         margin: 5px 5px;
       }
         #login {
@@ -43,16 +42,16 @@ body {
                 display: block;
               }
           .big-column {
-            display: inline-block;
             width: 750px;
             height: 1100px;
-            border: 5px solid red;
             margin: 5px 5px;
             margin-left: 300px;
             margin-top: -694px;
      }
             img {
               margin-left: 19px;
+              width: 250px;
+              border-radius: 10px;
             }
               h2 {
                 font-weight: lighter;
@@ -72,5 +71,26 @@ body {
                 p {
                   display:inline-block;
                 }
+                  textarea {
+                    width: 674px;
+                    height: 100px;
+                  }
+                    .comment {
+                      float: right;
+                      color: white;
+                      background-color: #60b044;
+                      border-radius: 4px;
+                      margin-right: 130px;
+                    }
+                      #tab1 {
+                        height: 26em;
+                      }
+                      #tab3 {
+                        height: 26em;
+                      }
+                      .kanyelyrics {
+                        -webkit-animation-name: wobble;
+                        animation-name: wobble;
+                      }
    }
 }
