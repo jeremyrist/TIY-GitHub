@@ -13,39 +13,37 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <!-- bower:css -->
+        <!-- endbower -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-      <h1 class="test"></h1>
-      <script type="text/template" id="lodashTemp">
 
-
-      <div class="container">
+      <main class="container" ng-app="TIY-GitHub">
         <div class="small-column">
           <div>
-          <img src="https://s-media-cache-ak0.pinimg.com/236x/20/cf/75/20cf75b89b94dfe6fe86c93c3c82ed70.jpg">
-            <h1><%- m.name %> </h1>
-            <h2 id="login">{{login}}</h2>
+          <img src="https://avatars3.githubusercontent.com/u/13407041?v=3&s=460">
+            <h1>{{jeremy.name}}</h1>
+            <h2 id="login">{{jeremy.login}}</h2>
               <hr />
           </div>
           <div id="userinfo">
-            <p><span class="octicon octicon-organization"></span> {{company}}</p>
-            <p><span class="octicon octicon-location"></span> {{location}}</p>
-            <p><span class="octicon octicon-mail"></span> {{email}}</p>
-            <p><span class="octicon octicon-link"></span> {{blog}}</p>
-            <p><span class="octicon octicon-clock"></span> {{created_at}}</p>
+            <p><span class="octicon octicon-organization"></span> {{jeremy.company}}</p>
+            <p><span class="octicon octicon-location"></span> {{jeremy.location}}</p>
+            <p><span class="octicon octicon-mail"></span> {{jeremy.email}}</p>
+            <p><span class="octicon octicon-link"></span> {{jeremy.blog}}</p>
+            <p><span class="octicon octicon-clock"></span> {{jeremy.created_at | date}}</p>
               <hr />
                 <nav class="small-stats">
-                  <h3>{{follwers}}</h3>
+                  <h3>{{jeremy.followers}}</h3>
                     <p class="small-blue">Followers
                 </nav>
                 <nav class="small-stats">
-                  <h3>{{starred}}</h3>
+                  <h3>{{jeremy.starred}}</h3>
                     <p class="small-blue">Starred</p>
                 </nav>
                 <nav class="small-stats">
-                  <h3>{{following}}</h3>
+                  <h3>{{jeremy.following}}</h3>
                     <p class="small-blue">Following</p>
                 </nav>
         </div>
@@ -70,7 +68,17 @@
               <li><a href='#tab3'><button id="publicactivity"><span class="octicon octicon-rss"></span> Public Activity</button></a></li>
             </ul>
             <div id='tab1'>
-              <p>This is the contributions tab.</p>
+              <p class="kanyelyrics">This is the contributions tab.
+                  <hr />
+                  One hand in the air, if he don't really care
+                  Two hands in the air, if he don't really care
+                  It's like that sometimes, I mean ridiculous
+                  It's like that sometimes, the shit ridiculous
+                  One hand in the air, if he don't really care
+                  Middle Finger in the air, if you don't really care
+                  It's like that sometimes man ridiculous
+                  Life can be sometimes ridiculous
+                </p>
             </div>
             <div id='tab2'>
               <p>Hi, this is the repositories tab.</p>
@@ -89,117 +97,44 @@
                     <hr />
             </div>
             <div id='tab3'>
-              <p>And this is the publicactivity tab.</p>
+              <p class="kanyelyrics">And this is the publicactivity tab.
+                  <hr />
+                  I'm so appalled Spalding ball,
+                  Baldin' Donald Trump, takin' dollars from y'all
+                  Baby your fired, your girlfriend hired
+                  But if you don't mind I'ma keep you on call
+                  We above the law, we don't give a fuck bout y'all
+                  I got dogs that'll chew a fuckin' whole through the wall
+                  But since they all lovers, I need more rubbers
+                  And if I don't use rubbers, need more covers
+                  Housekeeping, I mean goddamn
+                  One time,…
+                </p>
+
             </div>
               <hr />
 
+            <h4 class="commentheader">Write</h4>
+              <textarea>{{body}}
+              </textarea>
+              <button class="comment">Comment</button>
           </div>
       </div>
+    </main>
 </script>
 
-<template id="jeremyristapi">
-  <!doctype html>
-  <html class="no-js" lang="">
-      <head>
-          <meta charset="utf-8">
-          <meta http-equiv="x-ua-compatible" content="ie=edge">
-          <title>TIY GitHub profile for JeremyRist</title>
-          <meta name="description" content="">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-
-          <link rel="stylesheet" href="octicons/octicons.css">
-          <link rel="apple-touch-icon" href="apple-touch-icon.png">
-          <!-- Place favicon.ico in the root directory -->
-
-          <link rel="stylesheet" href="css/normalize.css">
-          <link rel="stylesheet" href="css/main.css">
-
-          <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-      </head>
-      <body>
-        <div class="container">
-          <div class="small-column">
-            <div>
-            <img src="https://s-media-cache-ak0.pinimg.com/236x/20/cf/75/20cf75b89b94dfe6fe86c93c3c82ed70.jpg">
-              <h1>{{name}}</h1>
-              <h2 id="login">{{login}}</h2>
-                <hr />
-            </div>
-            <div id="userinfo">
-              <p><span class="octicon octicon-organization"></span> {{company}}</p>
-              <p><span class="octicon octicon-location"></span> {{location}}</p>
-              <p><span class="octicon octicon-mail"></span> {{email}}</p>
-              <p><span class="octicon octicon-link"></span> {{blog}}</p>
-              <p><span class="octicon octicon-clock"></span> {{created_at}}</p>
-                <hr />
-                  <nav class="small-stats">
-                    <h3>{{follwers}}</h3>
-                      <p class="small-blue">Followers
-                  </nav>
-                  <nav class="small-stats">
-                    <h3>{{starred}}</h3>
-                      <p class="small-blue">Starred</p>
-                  </nav>
-                  <nav class="small-stats">
-                    <h3>{{following}}</h3>
-                      <p class="small-blue">Following</p>
-                  </nav>
-          </div>
-
-          <div class="big-column">
-            <!-- <ul class="tabs">
-              <button  id="contributions"><span class="octicon octicon-diff-added"></span> Contributions</button>
-
-              <button id="repositories"><span class="octicon octicon-repo"></span> Repositories</button>
-
-              <button id="publicactivity"><span class="octicon octicon-rss"></span> Public Activity</button>
-
-            </ul>
-                <ul class='tabs'>
-                  <li><a href='#tab1'>Tab 1</a></li>
-                  <li><a href='#tab2'>Tab 2</a></li>
-                  <li><a href='#tab3'>Tab 3</a></li>
-                </ul> -->
-              <ul class='tabs'>
-                <li><a href='#tab1'><button  id="contributions"><span class="octicon octicon-diff-added"></span> Contributions</button></a></li>
-                <li><a href='#tab2'><button id="repositories"><span class="octicon octicon-repo"></span> Repositories</button></a></li>
-                <li><a href='#tab3'><button id="publicactivity"><span class="octicon octicon-rss"></span> Public Activity</button></a></li>
-              </ul>
-              <div id='tab1'>
-                <p>This is the contributions tab.</p>
-              </div>
-              <div id='tab2'>
-                <p>Hi, this is the repositories tab.</p>
-                  <h2 class="poprepos">Popular Repositories</h2>
-                    <hr />
-                    <h4 class="examplerepos"><span class="octicon octicon-repo"></span> Spoon-Knife <p class="right">9,837<span class="octicon octicon-star"></span></p></h4>
-                      <p>This repo is for demonstration purposes only.</p>
-
-                      <hr />
-                    <h4 class="examplerepos"><span class="octicon octicon-repo"></span> Hello-World <p class="right">1,400<span class="octicon octicon-star"></span></p></h4>
-                      <p>This is your first repo!</p>
-
-                      <hr />
-                    <h4 class="examplerepos"><span class="octicon octicon-repo"></span> octocat.github.io <p class="right">10<span class="octicon octicon-star"></span></p></h4>
-
-                      <hr />
-              </div>
-              <div id='tab3'>
-                <p>And this is the publicactivity tab.</p>
-              </div>
-                <hr />
-
-            </div>
-        </div>
-
-</template>
 
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/lodash/lodash.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <!-- <script src="../bower_components/lodash/lodash.js"></script> -->
+        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <script src="../bower_components/angular/angular.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- <script src=""> -->
+        <!-- bower:js -->
+        <!-- endbower -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

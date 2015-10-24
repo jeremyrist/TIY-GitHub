@@ -12,6 +12,8 @@
 // $('ul.tabs').each(function(){
 //   var $active = $(this).find("a");
 // })
+
+// // PREVIOUS WORKING CODE
 $('ul.tabs').each(function(){
    // For each set of tabs, we want to keep track of
    // which tab is active and it's associated content
@@ -52,6 +54,7 @@ $('ul.tabs').each(function(){
 // Time to try to get that jQuery.getJSON to work!
  // var userApiUrl = ("../../apis/github/users/jeremyrist.json");
 
+//PREVIOUS WORKING CODE
 $.ajax({
   // url: userApiUrl,
   url: "https://api.github.com/users/jeremyrist",
@@ -68,6 +71,57 @@ $.ajax({
       // $('.small-column h2').text( json.login);
   }
 })
+
+// Homework code from John
+;(function(){
+
+ angular.module('TIY-GitHub', [ ])
+   .run(function($http, $rootScope){
+
+     $http.get('/apis/github/users/jeremyrist.json')
+       .then(function (response){
+        //  $rootScope.login = response.data.login;
+         $rootScope.jeremy = response.data;
+       })
+   })
+
+   .run(function($http, $rootScope){
+     $http.get('/apis/github/comments/comments.json')
+       .then(function (response){
+        //  $rootScope.login = response.data.login;
+         $rootScope.body = response.data;
+       })
+     })
+   })(); //END IIFE
+
+  //  .run(function($http, $rootScope){
+   //
+  //    $http.get('apis/github/users/jeremyrist/repositories.json')
+  //      .then(function (response){
+  //        $rootScope.repo4 = response.data[4];
+  //      });
+   //
+  //  })
+   //
+  //  .run(function($http, $rootScope){
+   //
+  //    $http.get('apis/github/users/jeremyrist/repositories.json')
+  //      .then(function (response){
+  //        $rootScope.repo3 = response.data[3];
+  //      });
+   //
+  //  })
+   //
+  //  .run(function($http, $rootScope){
+   //
+  //    $http.get('apis/github/users/jeremyrist/repositories.json')
+  //      .then(function (response){
+  //        $rootScope.repo2 = response.data[2];
+  //      });
+
+  //  })
+
+// })(); //END IIFE
 
 // lodash.template
 
